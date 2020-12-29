@@ -1,0 +1,14 @@
+<ng-container
+  *ngIf="isLogged; then thenTemplate; else elseTemplate"
+></ng-container>
+<ng-template #thenTemplate>
+  <h1>Estoy logueado</h1>
+  <button (click)="nivel = nivel + 1">Aumentar Nivel</button>
+  {{nivel}}
+</ng-template>
+<ng-template #elseTemplate>
+  <h1>No estoy logueado</h1>
+  <button (click)="isLogged = true">Loguearme</button>
+</ng-template>
+
+<button *ngIf="nivel >= 4">Acceso VIP</button>
