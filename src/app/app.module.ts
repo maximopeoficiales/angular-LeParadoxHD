@@ -8,12 +8,14 @@ import { FormularioComponent } from './components/formulario/formulario.componen
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RamdomUserComponent } from './components/ramdom-user/ramdom-user.component';
+import { MiDirectivaDirective } from './directives/mi-directiva.directive';
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     FormularioComponent,
     RamdomUserComponent,
+    MiDirectivaDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
