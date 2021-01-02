@@ -1,0 +1,15 @@
+<p>ramdom-user works!</p>
+
+<div class="row justify-content-center">
+  <div class="col-md-6" *ngFor="let ru of ramdomUsers">
+    <div class="card">
+      <img class="card-img-top" src="{{ ru.picture.medium }}" alt="" />
+      <div class="card-body">
+        <h4 class="card-title">MI nombre: {{ ru.getName() }}</h4>
+        <p class="card-text">{{ ru.email }}</p>
+        <p class="card-text">{{ ru.gender }}</p>
+        <p class="card-text">{{ ru.phone }}</p>
+      </div>
+    </div>
+  </div>
+</div>

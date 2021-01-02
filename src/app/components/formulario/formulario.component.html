@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>Atributos - ngModel - Eventos</h2>
+  <input type="button" value="{{ query }}" [disabled]="desactivado" />
+  <div class="row justify-content-center">
+    <p class="font-weight-bold">{{ query }}</p>
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Recipient's username"
+        aria-label="Recipient's username"
+        aria-describedby="button-addon2"
+        [(ngModel)]="query"
+        (ngModelChange)="search($event)"
+      />
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button">Buscar</button>
+      </div>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data">
+          <td scope="row">{{ item.name }}</td>
+          <td>{{ item.description }}</td>
+          <td>
+            {{ item.category }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
